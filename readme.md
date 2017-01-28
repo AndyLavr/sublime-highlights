@@ -3,10 +3,10 @@ Syntax highlighting for Sublime Text 3.
 
 ## Supported formats
 
-* knf - KNF format
+* knf - [KNF](https://github.com/essentialkaos/rbinstall/blob/master/common/rbinstall.knf) format
 * man - man page format
-* mockka - Mockka rule format
-* rbdef - RBBuild defenition file format
+* mockka - [Mockka](https://github.com/essentialkaos/mockka) rule format
+* rbdef - [RBBuild defenition file](https://github.com/essentialkaos/rbbuild/tree/master/SOURCES/defs) format
 * spec - RPM Spec format
 * upstart - Upstart format
 
