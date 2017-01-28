@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>fileTypes</key>
+  <array>
+    <string>spec</string>
+  </array>
+  <key>name</key>
+  <string>RPM Spec</string>
+  <key>patterns</key>
+  <array>
+    <dict>
+      <key>match</key>
+      <string>^(Summary|Name|Version|Release|Group|License|URL|Epoch|Source[0-9]{0,9}|Patch[0-9]{0,9}|BuildRoot|BuildRequires|Requires|Requires\(.*\)|Provides|Obsoletes|Conflicts|Vendor|BuildArch|AutoReq|AutoReqProv|AutoProv|Recommends|Suggests):</string>
+      <key>name</key>
+      <string>variable</string>
+    </dict>
+    <dict>
+      <key>match</key>
+      <string>\$[A-Za-z0-9_]{1,}\b</string>
+      <key>name</key>
+      <string>entity</string>
+    </dict>
+    <dict>
+      <key>match</key>
+      <string>%\{[a-zA-Z_0-9 ?:!]{1,}\}</string>
+      <key>name</key>
+      <string>entity</string>
+    </dict>
+    <dict>
+      <key>match</key>
+      <string>%(configure)</string>
+      <key>name</key>
+      <string>entity</string>
+    </dict>
+    <dict>
+      <key>match</key>
+      <string>#.*</string>
+      <key>name</key>
+      <string>comment</string>
+    </dict>
+    <dict>
+      <key>match</key>
+      <string>%(define|global|defattr|attr|dir|config|ghost|doc|verify)\b</string>
+      <key>name</key>
+      <string>keyword</string>
+    </dict>
+    <dict>
+      <key>match</key>
+      <string>%(package|description|prep|setup|patch[0-9]{1,9}|build|install|files|clean|pretrans|posttrans|preun|postun|changelog|post|pre|check|triggerun|triggerpostun)\b</string>
+      <key>name</key>
+      <string>constant</string>
+    </dict>
+    <dict>
+      <key>match</key>
+      <string>(if|then|fi|endif|elif|else|ifarch|-eq|-lt|-le|-ge|-gt|-ne)\b</string>
+      <key>name</key>
+      <string>keyword</string>
+    </dict>
+    <dict>
+      <key>match</key>
+      <string>(/dev/null)\b</string>
+      <key>name</key>
+      <string>keyword</string>
+    </dict>
+    <dict>
+      <key>match</key>
+      <string>^\* .*</string>
+      <key>name</key>
+      <string>variable</string>
+    </dict>
+    <dict>
+      <key>match</key>
+      <string>\".*\"</string>
+      <key>name</key>
+      <string>string</string>
+    </dict>
+    <dict>
+      <key>match</key>
+      <string>\'.*\'</string>
+      <key>name</key>
+      <string>string</string>
+    </dict>
+  </array>
+  <key>scopeName</key>
+  <string>source.spec</string>
+  <key>uuid</key>
+  <string>dc7bd243-7ba5-4298-bb65-6e0868b64c21</string>
+</dict>
+</plist>

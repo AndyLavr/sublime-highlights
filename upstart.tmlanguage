@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>fileTypes</key>
+  <array>
+    <string>conf</string>
+  </array>
+  <key>name</key>
+  <string>Upstart</string>
+  <key>patterns</key>
+  <array>
+    <dict>
+      <key>match</key>
+      <string>^(description|author|env|apparmor|console|chdir|chroot|emits|expect|export|instance)\b</string>
+      <key>name</key>
+      <string>support</string>
+    </dict>
+    <dict>
+      <key>match</key>
+      <string>#.*</string>
+      <key>name</key>
+      <string>comment</string>
+    </dict>
+    <dict>
+      <key>match</key>
+      <string>(script|end|pre-start|pre-stop|pre-stop|post-stop|respawn)\b</string>
+      <key>name</key>
+      <string>constant</string>
+    </dict>
+    <dict>
+      <key>match</key>
+      <string>(exec|rm|echo|touch|mkdir|chmod|chown)\b</string>
+      <key>name</key>
+      <string>keyword</string>
+    </dict>
+    <dict>
+      <key>match</key>
+      <string>".*"</string>
+      <key>name</key>
+      <string>string</string>
+    </dict>
+    <dict>
+      <key>match</key>
+      <string>\$\{?[a-zA-Z0-9_-]{1,}\}?\b</string>
+      <key>name</key>
+      <string>variable</string>
+    </dict>
+  </array>
+  <key>scopeName</key>
+  <string>source.upstart</string>
+  <key>uuid</key>
+  <string>0823e960-2fee-11e3-aa6e-0800200c9a66</string>
+</dict>
+</plist>
