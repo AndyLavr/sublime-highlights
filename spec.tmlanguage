@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-  <key>fileTypes</key>
+    <key>fileTypes</key>
   <array>
     <string>spec</string>
   </array>
@@ -12,7 +12,7 @@
   <array>
     <dict>
       <key>match</key>
-      <string>^(Summary|Name|Version|Release|Group|License|URL|Url|Epoch|Source\d*|Patch\d*|BuildRoot|BuildRequires|Requires|Requires\(.*\)|Provides|Obsoletes|Conflicts|Vendor|BuildArch|AutoReq|AutoReqProv|AutoProv|Recommends|Suggests|ExclusiveArch|ExcludeArch|BuildConflicts|Supplements|Packager|Prefix):</string>
+      <string>^(Summary|Name|Version|Release|Group|License|URL|Epoch|Source[0-9]{0,9}|Patch[0-9]{0,9}|BuildRoot|BuildRequires|BuildConflicts|BuildPreReq|Requires|Requires\(.*\)|Provides|Obsoletes|Conflicts|Vendor|BuildArch|ExclusiveArch|AutoReq|AutoReqProv|AutoProv|Recommends|Suggests|Packager):</string>
       <key>name</key>
       <string>variable</string>
     </dict>
@@ -24,37 +24,37 @@
     </dict>
     <dict>
       <key>match</key>
-      <string>%\{[a-zA-Z_0-9 ?:!]{1,}\}</string>
+      <string>%\{[a-zA-Z_0-9 ?:!_-]{1,}\}</string>
       <key>name</key>
       <string>entity</string>
     </dict>
     <dict>
       <key>match</key>
-      <string>%(configure|patch\d*)</string>
+      <string>%(configure)</string>
       <key>name</key>
       <string>entity</string>
     </dict>
     <dict>
       <key>match</key>
-      <string>#.*</string>
+      <string>^[ \t]{0,}#.*</string>
       <key>name</key>
       <string>comment</string>
     </dict>
     <dict>
       <key>match</key>
-      <string>%(define|global|defattr|attr|dir|config|ghost|doc|verify)\b</string>
+      <string>%(define|global|defattr|attr|dir|config|ghost|doc|verify|exclude)\b</string>
       <key>name</key>
       <string>keyword</string>
     </dict>
     <dict>
       <key>match</key>
-      <string>%(package|description|prep|setup|build|install|files|clean|pretrans|posttrans|preun|postun|changelog|post|pre|check|triggerun|triggerpostun|verifyscript)\b</string>
+      <string>%(package|description|prep|setup|patch[0-9]{1,9}|build|install|files|clean|pretrans|posttrans|preun|postun|changelog|post|pre|check|triggerun|triggerpostun|verifyscript)\b</string>
       <key>name</key>
       <string>constant</string>
     </dict>
     <dict>
       <key>match</key>
-      <string>(if|then|fi|endif|elif|else|ifarch|ifnarch|-eq|-lt|-le|-ge|-gt|-ne)\b</string>
+      <string>(if|then|fi|endif|elif|else|ifarch|-eq|-lt|-le|-ge|-gt|-ne)\b</string>
       <key>name</key>
       <string>keyword</string>
     </dict>
