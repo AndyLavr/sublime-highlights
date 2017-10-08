@@ -6,6 +6,8 @@
   <array>
     <string>rbdef</string>
   </array>
+  <key>firstLineMatch</key>
+  <string># RBBuild Def File</string>
   <key>name</key>
   <string>RBDef</string>
   <key>patterns</key>
