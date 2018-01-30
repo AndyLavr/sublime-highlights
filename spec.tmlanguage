@@ -12,7 +12,7 @@
   <array>
     <dict>
       <key>match</key>
-      <string>^(Summary|Name|Version|Release|Group|License|URL|Epoch|Source[0-9]{0,9}|Patch[0-9]{0,9}|BuildRoot|BuildRequires|BuildConflicts|BuildPreReq|Requires|Requires\(.*\)|Provides|Obsoletes|Conflicts|Vendor|BuildArch|ExclusiveArch|AutoReq|AutoReqProv|AutoProv|Recommends|Suggests|Packager):</string>
+      <string>^(Summary|Name|Version|Release|Group|License|URL|Epoch|Source[0-9]{0,9}|Patch[0-9]{0,9}|Build(Root|Requires|Conflicts|PreReq)|Requires|Requires\(.*\)|Provides|Obsoletes|Conflicts|Vendor|BuildArch|ExclusiveArch|Auto(Req|ReqProv|Prov)|Recommends|Suggests|Packager):</string>
       <key>name</key>
       <string>variable</string>
     </dict>
@@ -48,7 +48,7 @@
     </dict>
     <dict>
       <key>match</key>
-      <string>%(package|description|prep|setup|patch[0-9]{1,9}|build|install|files|clean|pretrans|posttrans|preun|postun|changelog|post|pre|check|triggerun|triggerpostun|verifyscript)\b</string>
+      <string>%(package|description|prep|setup|patch[0-9]{1,9}|build|install|files|clean|(pre|port)trans|(pre|post)un|changelog|post|pre|check|trigger(un|in|postun)|verifyscript)\b</string>
       <key>name</key>
       <string>constant</string>
     </dict>
